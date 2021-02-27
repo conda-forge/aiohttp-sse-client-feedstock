@@ -1,5 +1,5 @@
 {% set name = "aiohttp-sse-client" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fb8b5815086f3164abcb95665505e8c486fe388e683ba4081431c0305a1a3eda
+  sha256: 5004e29271624af586158dc7166cb0687a7a5997aab5b808f4b53400e1b72e3b
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Server-Sent Event python client library base on aiohttp'
+  summary: Server-Sent Event python client library base on aiohttp
   description: |
     Server-Sent Event python client library base on aiohttp
   dev_url: https://github.com/rtfol/aiohttp-sse-client
